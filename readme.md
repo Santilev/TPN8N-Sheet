@@ -92,7 +92,7 @@ El flujo se ejecuta correctamente en n8n y los datos quedan reflejados en la hoj
 
 El webhook de n8n recibe los datos enviados por `POST`, los procesa y los inserta automáticamente como una nueva fila en la hoja de Google Sheets configurada, usando una cuenta de servicio para la autenticación.
 
-## 🛠️ Tecnologías utilizadas
+##  Tecnologías utilizadas
 
 - **n8n** (self-hosted sobre DietPi)
 - **Google Cloud Platform** (Drive API, Sheets API)
