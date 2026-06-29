@@ -1,0 +1,113 @@
+{
+  "name": "My workflow 2",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "sheetN8N",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "5d22ab11-4eb9-46d2-9da4-dbc4fefbaf49",
+      "name": "Webhook",
+      "webhookId": "dd589f45-dea4-4cd9-afa9-7529f228271f"
+    },
+    {
+      "parameters": {
+        "authentication": "serviceAccount",
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1AHITbiUCfqxpRpfdskXy63dWK4hTh_9JDqa35Q8YBJ8",
+          "mode": "list",
+          "cachedResultName": "SheetN8N",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1AHITbiUCfqxpRpfdskXy63dWK4hTh_9JDqa35Q8YBJ8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Hoja 1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1AHITbiUCfqxpRpfdskXy63dWK4hTh_9JDqa35Q8YBJ8/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nombre": "={{ $json.body.nombre }}",
+            "Apellido": "={{ $json.body.apellido }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Nombre",
+              "displayName": "Nombre",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Apellido",
+              "displayName": "Apellido",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        208,
+        0
+      ],
+      "id": "cada0b61-fa86-4049-b631-a42563415d15",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleApi": {
+          "id": "H1WF7NcADK5Y7aCA",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "2d1893f1-bceb-4082-a95e-0a05af247381",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "2bb6e69e0e5fd5623f52a170b469ceb93c7f007e3d7d81839070ffa45e635494"
+  },
+  "nodeGroups": [],
+  "id": "fQle13RPsKB8cajM",
+  "tags": []
+}
