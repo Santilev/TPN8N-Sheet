@@ -2,13 +2,13 @@
 
 Este proyecto documenta paso a paso cómo conectar un flujo de **n8n** (alojado en una máquina virtual DietPi) con **Google Sheets**, usando un webhook que recibe datos por `POST` y los escribe automáticamente en una hoja de cálculo.
 
-## 📋 Requisitos previos
+##  Requisitos previos
 
 - Una cuenta de Google con acceso a [Google Cloud Console](https://console.cloud.google.com/)
 - Una instancia de n8n en funcionamiento (en este caso, sobre una VM DietPi)
 - Acceso a línea de comandos (`cmd`) para probar el webhook con `curl`
 
-## 🚀 Pasos de configuración
+##  Pasos de configuración
 
 ### 1. Habilitar las APIs necesarias en Google Cloud
 
@@ -88,7 +88,7 @@ El flujo se ejecuta correctamente en n8n y los datos quedan reflejados en la hoj
 |---|---|
 | ![Ejecución exitosa en n8n](images/image11.png) | ![Datos cargados en Google Sheets](images/image12.png) |
 
-## ✅ Resultado final
+## Resultado final
 
 El webhook de n8n recibe los datos enviados por `POST`, los procesa y los inserta automáticamente como una nueva fila en la hoja de Google Sheets configurada, usando una cuenta de servicio para la autenticación.
 
